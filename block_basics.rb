@@ -22,3 +22,9 @@ end
 
 # In the example above, the block parameter is ________ and it is a ________ variable
 # 'count' is a block local variable scoped at the block level
+
+desserts = { "chocolate" => 1.00, "vanilla" => 0.75, "cinnamon" => 1.25 }
+
+desserts.each do |flavor, price|
+  puts "$#{price * 2} for a cup of #{flavor}."
+end
