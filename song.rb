@@ -1,4 +1,4 @@
-require 'Time'
+require_relative 'my_enumberable'
 
 class Song
   attr_accessor :name, :artist, :duration
@@ -15,7 +15,8 @@ class Song
 end
 
 class Playlist
-  include Enumerable
+  # include Enumerable
+  include MyEnumerable
 
   def initialize(name)
     @name = name
@@ -47,5 +48,5 @@ my_playlist.add(song_2)
 my_playlist.add(song_3)
 my_playlist.add(song_4)
 
-duration_array = my_playlist.collect { |song| song.duration }
-p duration_array
+# duration_array = my_playlist.my_map{ |song| song.duration }
+p song_title_array = my_playlist.my_select { |song| song.name == "Black Skinhead" }
